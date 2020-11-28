@@ -57,6 +57,25 @@ nav h4 {
   height: 3px;
   background-color: #f7f7f7;
   margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform-origin: 1px;
+          transform-origin: 1px;
+}
+
+.burger .line1 {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.burger .line2 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.burger .line3 {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 @media screen and (max-width: 1024px) {
@@ -104,5 +123,21 @@ nav h4 {
 .nav-active {
   -webkit-transform: translate(0%);
           transform: translate(0%);
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.toggle .line2 {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 /*# sourceMappingURL=styles.css.map */

@@ -44,6 +44,17 @@ nav {
     height: 3px;
     background-color: #f7f7f7;
     margin: 5px;
+    transition: all 0.3s ease;
+    transform-origin: 1px;
+  }
+  .line1 {
+    transform: rotate(0);
+  }
+  .line2 {
+    transform: translateX(0);
+  }
+  .line3 {
+    transform: rotate(0);
   }
 }
 
@@ -79,4 +90,15 @@ nav {
 
 .nav-active {
   transform: translate(0%);
+}
+
+.toggle .line1 {
+  transform: rotate(45deg);
+}
+.toggle .line2 {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(-45deg);
 }

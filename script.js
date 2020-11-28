@@ -29,6 +29,8 @@ const navSlide = () => {
     } else {
       tl.clear();
     }
+
+    burger.classList.toggle('toggle');
   });
 };
 
