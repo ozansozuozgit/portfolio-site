@@ -23,22 +23,22 @@ navSlide();
 const profilePic = document.querySelector('#landing img');
 // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml6 .letters');
-const name = document.querySelector('.letter:nth-child(4)');
-console.log(name);
+
 
 textWrapper.innerHTML = textWrapper.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
 );
+var myTimeline = anime.timeline();
 
-anime.timeline({ loop: false }).add({
+myTimeline.add({
   targets: '.ml6 .letter',
   translateY: ['1.1em', 0],
   translateZ: 0,
   duration: 750,
   delay: (el, i) => 50 * i,
 });
-anime.timeline({ loop: false }).add(
+myTimeline.add(
   {
     targets: [
       '.letter:nth-child(4)',
@@ -49,14 +49,39 @@ anime.timeline({ loop: false }).add(
 
     translateY: ['2.1em', 0],
     duration: 1000,
-    color: '#F3AC59',
+    color: '#A54F77',
   },
-  '+=1500'
+  '+=300'
 );
-anime.timeline({ loop: false }).add({
-  targets: profilePic,
-  opacity: [0, 1],
-  scale: [0.2, 1],
-  durationIn: 1750,
-  delay: 500,
-});
+myTimeline.add(
+  {
+    targets: profilePic,
+    opacity: [0, 1],
+    scale: [0.2, 1],
+    duration: 1500,
+  },
+  '-=1000'
+);
+
+myTimeline
+  .add({
+    targets: '.ml5 .ampersand',
+    opacity: [0, 1],
+    scaleY: [0.5, 1],
+    easing: 'easeOutExpo',
+    duration: 600,
+  })
+  .add({
+    targets: '.ml5 .letters-left',
+    opacity: [0, 1],
+    translateX: ['0.5em', 0],
+    easing: 'easeOutExpo',
+    duration: 600,
+  })
+  .add({
+    targets: '.ml5 .letters-right',
+    opacity: [0, 1],
+    translateX: ['-0.5em', 0],
+    easing: 'easeOutExpo',
+    duration: 600,
+  });
