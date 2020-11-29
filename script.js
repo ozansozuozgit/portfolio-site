@@ -18,7 +18,7 @@ const navSlide = () => {
         },
         {
           duration: 1,
-          delay: 1,
+          delay: 0.5,
           stagger: 0.2,
           opacity: 1,
           x: 0,
@@ -35,3 +35,10 @@ const navSlide = () => {
 };
 
 navSlide();
+
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'particles.json', function () {
+  console.log('callback - particles.js config loaded');
+});
