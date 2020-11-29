@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 body {
   background-color: #222222;
-  color: #f7f7f7;
+  color: #fffbea;
 }
 
 nav {
@@ -14,13 +14,13 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   min-height: 8vh;
-  -webkit-box-shadow: 0 3px 5px #3b3b3b;
-          box-shadow: 0 3px 5px #3b3b3b;
+  -webkit-box-shadow: 0px -7px 10px #fffbea;
+          box-shadow: 0px -7px 10px #fffbea;
   font-family: 'Poppins', sans-serif;
 }
 
 nav h4 {
-  color: #f0b429;
+  color: #fffbea;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 20px;
@@ -40,9 +40,9 @@ nav h4 {
 }
 
 .nav-links a {
-  color: #f7f7f7;
+  color: #fffbea;
   text-decoration: none;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: bold;
   font-size: 14px;
 }
@@ -55,7 +55,7 @@ nav h4 {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #f7f7f7;
+  background-color: #fffbea;
   margin: 5px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -109,7 +109,7 @@ nav h4 {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: #3b3b3b;
+    background-color: #222222;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -127,6 +127,8 @@ nav h4 {
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    border: 1px solid #fffbea;
+    z-index: 123123;
   }
   .nav-links li {
     opacity: 0;
@@ -144,7 +146,7 @@ nav h4 {
 .ml6 {
   position: relative;
   font-weight: 900;
-  font-size: 3.3em;
+  font-size: 4.5em;
 }
 
 .ml6 .text-wrapper {
@@ -159,5 +161,22 @@ nav h4 {
 .ml6 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+#landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 92vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#landing img {
+  width: 450px;
+  height: 450px;
 }
 /*# sourceMappingURL=styles.css.map */

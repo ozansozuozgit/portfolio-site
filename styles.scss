@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+// $primary-color: #fff;
+// $first-color: #4070f4;
+// $second-color: #16131b;
+// $third-color: #d23170;
 
+$primary-color: #222222;
+$first-color: #E12D39;
+$second-color: #fffbea;
+$third-color: #d23170;
 body {
-  background-color: #222222;
-  color: #f7f7f7;
+  background-color: $primary-color;
+  color: $second-color;
 }
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  box-shadow: 0 3px 5px #3b3b3b;
+  box-shadow: 0px -7px 10px $second-color;
   font-family: 'Poppins', sans-serif;
 
   h4 {
-    color: #f0b429;
+    color: $second-color;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 20px;
@@ -28,9 +36,9 @@ nav {
     list-style: none;
   }
   a {
-    color: #f7f7f7;
+    color: $second-color;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-weight: bold;
     font-size: 14px;
   }
@@ -42,7 +50,7 @@ nav {
   div {
     width: 25px;
     height: 3px;
-    background-color: #f7f7f7;
+    background-color: $second-color;
     margin: 5px;
     transition: all 0.3s ease;
     transform-origin: 1px;
@@ -82,13 +90,15 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: #3b3b3b;
+    background-color: $primary-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
     transform: translate(100%);
     transition: transform 0.5s ease-in;
+    border: 1px solid $second-color;
+    z-index: 123123;
     li {
       opacity: 0;
     }
@@ -106,7 +116,7 @@ nav {
 .ml6 {
   position: relative;
   font-weight: 900;
-  font-size: 3.3em;
+  font-size: 4.5em;
 }
 
 .ml6 .text-wrapper {
@@ -121,4 +131,15 @@ nav {
 .ml6 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+#landing {
+  display: flex;
+  height: 92vh;
+  align-items: center;
+  justify-content: space-around;
+  img {
+    width: 450px;
+    height: 450px;
+  }
 }
