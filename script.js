@@ -9,36 +9,32 @@ const navSlide = () => {
   // Toggle Nav
   burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
-    if (nav.classList.contains('nav-active')) {
-      tl.fromTo(
-        navLinks,
-        {
-          opacity: 0,
-          x: 100,
-        },
-        {
-          duration: 1,
-          delay: 0.5,
-          stagger: 0.2,
-          opacity: 1,
-          x: 0,
-          ease: 'elastic.out(1, 0.3)',
-        },
-        '-0.35'
-      );
-    } else {
-      tl.clear();
-    }
 
+    anime({
+      targets: navLinks,
+      translateX: [100, 0], // from to
+      opacity: 1,
+      scaleY: [0, 1],
+      easing: 'easeOutExpo',
+      delay: anime.stagger(300),
+    });
     burger.classList.toggle('toggle');
   });
 };
 
 navSlide();
 
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene);
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles-js', 'particles.json', function () {
-  console.log('callback - particles.js config loaded');
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
+
+anime.timeline({ loop: false }).add({
+  targets: '.ml6 .letter',
+  translateY: ['1.1em', 0],
+  translateZ: 0,
+  duration: 750,
+  delay: (el, i) => 50 * i,
 });

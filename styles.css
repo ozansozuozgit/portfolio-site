@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 body {
   background-color: #222222;
+  color: #f7f7f7;
 }
 
 nav {
@@ -15,12 +16,11 @@ nav {
   min-height: 8vh;
   -webkit-box-shadow: 0 3px 5px #3b3b3b;
           box-shadow: 0 3px 5px #3b3b3b;
-  color: white;
   font-family: 'Poppins', sans-serif;
 }
 
 nav h4 {
-  color: #f7c948;
+  color: #f0b429;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 20px;
@@ -63,19 +63,35 @@ nav h4 {
           transform-origin: 1px;
 }
 
-.burger .line1 {
+.burger div .line1 {
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
 
-.burger .line2 {
+.burger div .line2 {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.burger .line3 {
+.burger div .line3 {
   -webkit-transform: rotate(0);
           transform: rotate(0);
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.toggle .line2 {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 1024px) {
@@ -125,19 +141,23 @@ nav h4 {
           transform: translate(0%);
 }
 
-.toggle .line1 {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
 }
 
-.toggle .line2 {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  opacity: 0;
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
 }
 
-.toggle .line3 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
 }
 /*# sourceMappingURL=styles.css.map */

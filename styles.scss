@@ -2,6 +2,7 @@
 
 body {
   background-color: #222222;
+  color: #f7f7f7;
 }
 nav {
   display: flex;
@@ -9,11 +10,10 @@ nav {
   align-items: center;
   min-height: 8vh;
   box-shadow: 0 3px 5px #3b3b3b;
-  color: white;
   font-family: 'Poppins', sans-serif;
 
   h4 {
-    color: #f7c948;
+    color: #f0b429;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 20px;
@@ -46,16 +46,26 @@ nav {
     margin: 5px;
     transition: all 0.3s ease;
     transform-origin: 1px;
+    .line1 {
+      transform: rotate(0);
+    }
+    .line2 {
+      transform: translateX(0);
+    }
+    .line3 {
+      transform: rotate(0);
+    }
   }
-  .line1 {
-    transform: rotate(0);
-  }
-  .line2 {
-    transform: translateX(0);
-  }
-  .line3 {
-    transform: rotate(0);
-  }
+}
+.toggle .line1 {
+  transform: rotate(45deg);
+}
+.toggle .line2 {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 1024px) {
@@ -92,13 +102,23 @@ nav {
   transform: translate(0%);
 }
 
-.toggle .line1 {
-  transform: rotate(45deg);
+// Intro text
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
 }
-.toggle .line2 {
-  transform: translateX(100%);
-  opacity: 0;
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
 }
-.toggle .line3 {
-  transform: rotate(-45deg);
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
 }
