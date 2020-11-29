@@ -1,27 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-// $primary-color: #fff;
-// $first-color: #4070f4;
-// $second-color: #16131b;
-// $third-color: #d23170;
 
-$primary-color: #222222;
-$first-color: #E12D39;
-$second-color: #fffbea;
-$third-color: #d23170;
+$primary-color: #16131b;
+$first-color: #f3ac59;
+$second-color: #ffffff;
+$third-color: #a54f77;
+$blue: #4070f4;
 body {
   background-color: $primary-color;
   color: $second-color;
+  font-family: 'Poppins', sans-serif;
 }
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 7vh;
   box-shadow: 0px -7px 10px $second-color;
-  font-family: 'Poppins', sans-serif;
 
   h4 {
-    color: $second-color;
+    color: $first-color;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 20px;
@@ -41,6 +38,10 @@ nav {
     letter-spacing: 2px;
     font-weight: bold;
     font-size: 14px;
+
+    &:hover {
+      color: $third-color;
+    }
   }
 }
 
@@ -81,6 +82,19 @@ nav {
     width: 50%;
   }
 }
+@media screen and (max-width: 878px) {
+  #landing {
+    .landing-text {
+      text-align: center;
+    }
+    img {
+      display: none;
+    }
+    .landing-social {
+      margin: auto;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -112,7 +126,20 @@ nav {
   transform: translate(0%);
 }
 
-// Intro text
+#landing {
+  display: flex;
+  height: 92vh;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+  img {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+// Intro text animation
 .ml6 {
   position: relative;
   font-weight: 900;
@@ -132,14 +159,44 @@ nav {
   display: inline-block;
   line-height: 1em;
 }
+// Front end developer animation
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 3em;
+  color: $first-color;
+}
 
-#landing {
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+.landing-social {
   display: flex;
-  height: 92vh;
-  align-items: center;
-  justify-content: space-around;
-  img {
-    width: 450px;
-    height: 450px;
+  width: 30%;
+  justify-content: space-between;
+  i {
+    font-size: 1.5em;
+    color: $first-color;
+    transition: transform 0.2s ease-in;
+    &:hover {
+      color: $third-color;
+      transform: translateY(-5px);
+    }
   }
+}
+.landing-text-contact {
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
