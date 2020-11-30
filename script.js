@@ -24,7 +24,6 @@ const profilePic = document.querySelector('#landing img');
 // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml6 .letters');
 
-
 textWrapper.innerHTML = textWrapper.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
@@ -64,24 +63,33 @@ myTimeline.add(
 );
 
 myTimeline
-  .add({
-    targets: '.ml5 .ampersand',
-    opacity: [0, 1],
-    scaleY: [0.5, 1],
-    easing: 'easeOutExpo',
-    duration: 600,
-  })
-  .add({
-    targets: '.ml5 .letters-left',
-    opacity: [0, 1],
-    translateX: ['0.5em', 0],
-    easing: 'easeOutExpo',
-    duration: 600,
-  })
-  .add({
-    targets: '.ml5 .letters-right',
-    opacity: [0, 1],
-    translateX: ['-0.5em', 0],
-    easing: 'easeOutExpo',
-    duration: 600,
-  });
+  .add(
+    {
+      targets: '.ml5 .ampersand',
+      opacity: [0, 1],
+      scaleY: [0.5, 1],
+      easing: 'easeOutExpo',
+      duration: 600,
+    },
+    '-=1000'
+  )
+  .add(
+    {
+      targets: '.ml5 .letters-left',
+      opacity: [0, 1],
+      translateX: ['0.5em', 0],
+      easing: 'easeOutExpo',
+      duration: 600,
+    },
+    '-=1000'
+  )
+  .add(
+    {
+      targets: '.ml5 .letters-right',
+      opacity: [0, 1],
+      translateX: ['-0.5em', 0],
+      easing: 'easeOutExpo',
+      duration: 600,
+    },
+    '-=500'
+  );
