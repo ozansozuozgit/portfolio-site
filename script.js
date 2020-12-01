@@ -110,32 +110,6 @@ ScrollTrigger.create({
     targets: '.main-nav-bar',
   },
 });
-gsap.to('#about', {
-  scrollTrigger: {
-    trigger: '#about',
-    start: 'center center', // when the top of the trigger hits the top of the viewport
-    end: 'center top', // end after scrolling 500px beyond the start
-    scrub: 0.5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-    // pin: true,
-    onEnter: () => {
-      document.querySelector('#about-nav').classList.add('active');
-    },
-    onEnterBack: () => {
-      document.querySelector('#about-nav').classList.add('active');
-    },
-
-    onLeave: () => {
-      document.querySelector('#about-nav').classList.remove('active');
-    },
-    onLeaveBack: () => {
-      document.querySelector('#about-nav').classList.remove('active');
-    },
-  },
-  opacity: 0,
-  duration: 1,
-  // transformOrigin: 'left center',
-  ease: 'power4.in',
-});
 
 gsap.from('.about-title', {
   scrollTrigger: {
@@ -148,4 +122,37 @@ gsap.from('.about-title', {
   yPercent: -200,
   opacity: 0,
   scale: 0.5,
+});
+
+// Add fade out for each section and highlight current nav in navbar
+document.querySelectorAll('.nav-link').forEach((link) => {
+  const sectionTrigger = link.getAttribute('href');
+
+  gsap.to(sectionTrigger, {
+    scrollTrigger: {
+      trigger: sectionTrigger,
+      start: 'center center', // when the top of the trigger hits the top of the viewport
+      // start: 'top center', // when the top of the trigger hits the top of the viewport
+
+      end: 'center top', // end after scrolling 500px beyond the start
+      scrub: 0.5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      // pin: true,
+      onEnter: () => {
+        link.classList.add('active');
+      },
+      onEnterBack: () => {
+        link.classList.add('active');
+      },
+      onLeave: () => {
+        link.classList.remove('active');
+      },
+      onLeaveBack: () => {
+        link.classList.remove('active');
+      },
+    },
+    opacity: 0,
+    duration: 1,
+    // transformOrigin: 'left center',
+    ease: 'power4.in',
+  });
 });
