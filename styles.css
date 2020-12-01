@@ -64,7 +64,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #262626;
+  color: #ff3b7c;
 }
 
 .burger {
@@ -227,9 +227,12 @@ main {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: url(images/pattern1.png) no-repeat 50% 50%;
-  height: 80vh;
-  margin-top: 10vh;
+  height: 65vh;
+  margin-top: 50vh;
 }
 
 #about .about-tech {
@@ -240,6 +243,30 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+}
+
+#about .about-tech h2 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 35px;
+  margin-top: 0;
+  color: #4070f4;
+}
+
+#about .about-tech h2::after {
+  content: '';
+  border: 1px solid #ff3b7c;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
 }
 
 #about .about-tech .tech-categories {
@@ -262,7 +289,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 25%;
+  width: 30%;
 }
 
 #about .about-tech .tech-icons img {
@@ -272,11 +299,13 @@ main {
 
 #about .about-title {
   font-size: 2em;
+  color: #ff3b7c;
 }
 
 #about .about-text {
-  margin: auto;
-  width: 40%;
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
 }
 
 #about .about-text p {
@@ -347,7 +376,7 @@ main {
 }
 
 .landing-social i:hover {
-  color: #a54f77;
+  color: #ff3b7c;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
@@ -375,7 +404,7 @@ main {
 }
 
 .border-animate:after {
-  background: #a54f77;
+  background: #ff3b7c;
   background: radial-gradient(circle, #ff8c05 4%, #a54f77 85%, #262626 100%);
   -webkit-animation: 2s clockwise infinite;
           animation: 2s clockwise infinite;
