@@ -110,68 +110,42 @@ ScrollTrigger.create({
     targets: '.main-nav-bar',
   },
 });
-gsap.from('#about', {
-  scrollTrigger: '#about img', // same as scrollTrigger: {trigger: ".line-1", toggleActions: "play none none none", start: "top bottom", end: "bottom top"}
-  xPercent: -100,
-  duration: 1,
+gsap.to('#about', {
+  scrollTrigger: {
+    trigger: '#about',
+    start: 'center center', // when the top of the trigger hits the top of the viewport
+    end: 'center top', // end after scrolling 500px beyond the start
+    scrub: 0.5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+    // pin: true,
+    onEnter: () => {
+      document.querySelector('#about-nav').classList.add('active');
+    },
+    onEnterBack: () => {
+      document.querySelector('#about-nav').classList.add('active');
+    },
+
+    onLeave: () => {
+      document.querySelector('#about-nav').classList.remove('active');
+    },
+    onLeaveBack: () => {
+      document.querySelector('#about-nav').classList.remove('active');
+    },
+  },
   opacity: 0,
+  duration: 1,
   // transformOrigin: 'left center',
   ease: 'power4.in',
 });
-// gsap.from('#about-nav', {
-//   scrollTrigger: '#about img',
-//   color: '#424',
-//   duration: 2,
-// });
-// gsap.from('#about-nav', {
-//   scrollTrigger: {
-//     trigger: '#about',
-//     // scrub: true,
-//     toggleActions: 'play none none reverse',
-//     start: 'bottom top', // [trigger] [scroller] positions
-//     end: 'bottom top', // [trigger] [scroller] positions
-//     toggleClass: 'active',
-//     onEnter: () => console.log('enter'),
 
-//     onLeave: () => console.log('left'),
-//     // start: 'top top',
-//     // end: 'bottom bottom',
-//   },
-//   // scaleX: 0,
-//   // transformOrigin: 'left center',
-//   // ease: 'none',
-//   color: '#424',
-// });
-// // ScrollTrigger.batch(".box", {
-// //   onEnter: (elements, triggers) => {
-// //     gsap.to(elements, {opacity: 1, stagger: 0.15});
-// //     console.log(elements.length, "elements entered");
-// //   },
-// //   onLeave: (elements, triggers) => {
-// //     gsap.to(elements, {opacity: 0, stagger: 0.15});
-// //     console.log(elements.length, "elements left");
-// //   }
-// // });
-const navLinksTest = document.querySelectorAll('.nav-links li a');
-
-navLinksTest.forEach((link) => {
-  let id = link.getAttribute('href');
-  // let section = document.querySelector(id);
-
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: id,
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-      onEnter: () => console.log(id),
-    },
-  });
-  tl.fromTo(id),
-    {
-      color: '#fff',
-    },
-    {
-      color: '#524',
-    };
+gsap.from('.about-title', {
+  scrollTrigger: {
+    trigger: '.about-text',
+    start: 'center bottom',
+    end: '-=500',
+    scrub: 0.5,
+  },
+  xPercent: -200,
+  yPercent: -200,
+  opacity: 0,
+  scale: 0.5,
 });
