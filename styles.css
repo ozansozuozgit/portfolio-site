@@ -180,7 +180,8 @@ main {
       justify-content: space-around;
   background: url(images/pattern1.png) no-repeat 50% 50%;
   height: 67vh;
-  margin-top: 23vh;
+  margin-top: 20vh;
+  min-height: 500px;
 }
 
 #landing .border-animate {
