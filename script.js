@@ -124,13 +124,12 @@ gsap.from('.about-background', {
 
 // Add fade out for each section and highlight current nav in navbar
 document.querySelectorAll('.nav-link').forEach((link) => {
-  const sectionTrigger = link.getAttribute('href');
+  const sectionTrigger = link.getAttribute('href').split('-')[0];
 
   gsap.to(sectionTrigger, {
     scrollTrigger: {
       trigger: sectionTrigger,
       start: 'top 20%',
-      markers: true,
       end: 'bottom 20%',
       scrub: 0.5,
       // pin: true,
@@ -152,24 +151,6 @@ document.querySelectorAll('.nav-link').forEach((link) => {
     // transformOrigin: 'left center',
     ease: 'power4.in',
   });
-
-  // gsap.from(sectionTrigger, {
-  //   scrollTrigger: {
-  //     trigger: sectionTrigger,
-  //     start: 'top bottom',
-  //     end: 'center bottom',
-  //     scrub: 0.5,
-  //     onEnter: () => {
-  //       console.log('enter');
-  //     },
-  //     onLeave: () => {
-  //       console.log('leave');
-  //     },
-  //   },
-  //   xPercent: 100,
-  //   duration: 1,
-  //   ease: 'power4.in',
-  // });
 });
 
 const reveal = gsap.utils.toArray('.reveal');
@@ -182,12 +163,29 @@ reveal.forEach((text, i) => {
   });
 });
 
-const images = gsap.utils.toArray('.project-container img');
+const images = gsap.utils.toArray('.project-info');
 images.forEach((image, i) => {
   ScrollTrigger.create({
     trigger: image,
-    toggleClass: 'image-active',
+    toggleClass: 'project-active',
     start: 'top 80%',
     end: 'top 20%',
+  });
+});
+const projects = gsap.utils.toArray('.project-container');
+
+const projectBackgrounds = gsap.utils.toArray('.project-background');
+console.log(projects);
+projectBackgrounds.forEach((project, i) => {
+  gsap.from(project, {
+    scrollTrigger: {
+      trigger: projects[i],
+      start: 'top 100%',
+      end: 'bottom 50%',
+      // markers: true,
+      scrub: 2,
+    },
+    xPercent: 200,
+    opacity: 0,
   });
 });

@@ -481,10 +481,16 @@ main {
   margin-top: 50vh;
 }
 
+#projects h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: #ff8c05;
+}
+
 #projects .project-container {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -496,10 +502,18 @@ main {
           align-items: center;
 }
 
+#projects .project-container .project-background {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background: url(images/pattern1.png) no-repeat 50% 50%;
+  z-index: -24;
+}
+
 #projects .project-container .reveal {
   position: relative;
   color: #fff;
-  font-size: 2.5em;
+  font-size: 1.5em;
   padding: 0 10px;
   font-weight: 500;
   -webkit-transform-origin: left;
@@ -510,13 +524,17 @@ main {
   transition: 0.5s;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #ffffff;
 }
 
 #projects .project-container .reveal:nth-child(2) {
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1em;
   letter-spacing: 2px;
   display: inline-block;
+  color: #ff3b7c;
 }
 
 #projects .project-container .active {
@@ -533,7 +551,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #e02bff;
+  background: #ffffff;
   -webkit-transform-origin: right;
           transform-origin: right;
   -webkit-transition: 0.5s;
@@ -543,7 +561,7 @@ main {
 }
 
 #projects .project-container .reveal:nth-child(2)::before {
-  background: #f5e23b;
+  background: #ff3b7c;
 }
 
 #projects .project-container .active:before {
@@ -553,20 +571,52 @@ main {
           transition-delay: 0.5s;
 }
 
-#projects .project-container img {
+#projects .project-container .project-info {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
   left: -100px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#projects .project-container .project-info p {
+  width: 50%;
+  font-size: 1.2em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  line-height: 25px;
+  padding: 20px;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+}
+
+#projects .project-container a {
   display: block;
   margin-left: 10px;
   margin-top: 20px;
-  max-width: 500px;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  width: 80%;
+  width: 50%;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
 }
 
-#projects .project-container .image-active {
+#projects .project-container a img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #4070f4;
+}
+
+#projects .project-container .project-active {
   left: 0;
   opacity: 1;
 }

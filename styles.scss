@@ -172,6 +172,9 @@ body {
       }
     }
   }
+
+  #projects {
+  }
 }
 
 .nav-active {
@@ -391,30 +394,49 @@ main {
 }
 #projects {
   margin-top: 50vh;
+
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: $first-color;
+  }
+
   .project-container {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    .project-background {
+      position: absolute;
+      height: 50%;
+      width: 100%;
+      background: url(images/pattern1.png) no-repeat 50% 50%;
+      z-index: -24;
+    }
+
     .reveal {
       position: relative;
       color: #fff;
-      font-size: 2.5em;
+      font-size: 1.5em;
       padding: 0 10px;
       font-weight: 500;
       transform-origin: left;
       transform: scaleX(0);
       transition: 0.5s;
       transition-delay: 0.5s;
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: $second-color;
     }
     .reveal:nth-child(2) {
       font-weight: 300;
-      font-size: 1.5em;
+      font-size: 1em;
       letter-spacing: 2px;
       display: inline-block;
+      color: $fourth-color;
     }
     .active {
       transform: scaleX(1);
@@ -427,30 +449,51 @@ main {
       left: 0;
       width: 100%;
       height: 100%;
-      background: #e02bff;
+      background: $second-color;
       transform-origin: right;
       transition: 0.5s;
       transition-delay: 0;
     }
     .reveal:nth-child(2)::before {
-      background: #f5e23b;
+      background: $fourth-color;
     }
     .active:before {
       transform: scaleX(0);
       transition-delay: 0.5s;
     }
-    img {
+    .project-info {
       position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      opacity: 0;
       left: -100px;
+      transition: 0.5s;
+
+      p {
+        width: 50%;
+        font-size: 1.2em;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        line-height: 25px;
+        padding: 20px;
+        flex: 0.5;
+      }
+    }
+    a {
       display: block;
       margin-left: 10px;
       margin-top: 20px;
-      max-width: 500px;
-      opacity: 0;
-      transition: 0.5s;
-      width: 80%;
+      width: 50%;
+      flex: 0.5;
+      img {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid $fifth-color;
+      }
     }
-    .image-active {
+    .project-active {
       left: 0;
       opacity: 1;
     }
