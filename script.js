@@ -55,7 +55,7 @@ myTimeline.add(
 
     translateY: ['2.1em', 0],
     duration: 1000,
-    color: '#d71e5b',
+    color: '#ff8c05',
   },
   '+=300'
 );
@@ -111,17 +111,38 @@ ScrollTrigger.create({
   },
 });
 
-gsap.from('.about-title', {
+// gsap.from('.about-title', {
+//   scrollTrigger: {
+//     trigger: '.about-text',
+//     start: 'center bottom',
+//     end: '-=500',
+//     scrub: 2,
+//   },
+//   xPercent: -200,
+//   yPercent: -200,
+//   opacity: 0,
+//   scale: 0.5,
+// });
+gsap.from('.about-background', {
   scrollTrigger: {
     trigger: '.about-text',
-    start: 'center bottom',
-    end: '-=500',
-    scrub: 0.5,
+    start: 'top center',
+    end: 'center bottom',
+    scrub: 2,
   },
-  xPercent: -200,
-  yPercent: -200,
+  xPercent: 200,
   opacity: 0,
-  scale: 0.5,
+});
+
+gsap.from('.landing-background', {
+  scrollTrigger: {
+    trigger: '.landing-social',
+    start: 'top bottom',
+    end: 'top 150px',
+    scrub: 1,
+  },
+  xPercent: 200,
+  opacity: 0,
 });
 
 // Add fade out for each section and highlight current nav in navbar
@@ -131,11 +152,10 @@ document.querySelectorAll('.nav-link').forEach((link) => {
   gsap.to(sectionTrigger, {
     scrollTrigger: {
       trigger: sectionTrigger,
-      start: 'center center', // when the top of the trigger hits the top of the viewport
-      // start: 'top center', // when the top of the trigger hits the top of the viewport
+      start: 'center center',
 
-      end: 'center top', // end after scrolling 500px beyond the start
-      scrub: 0.5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      end: 'center top',
+      scrub: 0.5,
       // pin: true,
       onEnter: () => {
         link.classList.add('active');

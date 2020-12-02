@@ -171,6 +171,7 @@ body {
 main {
   width: 80%;
   margin: auto;
+  overflow-x: hidden;
 }
 
 #landing {
@@ -183,9 +184,10 @@ main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background: url(images/pattern1.png) no-repeat 50% 50%;
-  height: 67vh;
-  margin-top: 23vh;
-  min-height: 500px;
+  height: 58vh;
+  margin-top: 18vh;
+  min-height: 480px;
+  position: relative;
 }
 
 #landing .landing-text-contact {
@@ -230,9 +232,17 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(images/pattern1.png) no-repeat 50% 50%;
   height: 65vh;
   margin-top: 50vh;
+  position: relative;
+}
+
+#about .about-background {
+  position: absolute;
+  height: 130%;
+  width: 100%;
+  background: url(images/pattern1.png) no-repeat 50% 50%;
+  z-index: -24;
 }
 
 #about .about-tech {
@@ -299,7 +309,7 @@ main {
 
 #about .about-title {
   font-size: 2em;
-  color: #ff3b7c;
+  color: #ff8c05;
 }
 
 #about .about-text {
@@ -318,7 +328,7 @@ main {
 .ml6 {
   position: relative;
   font-weight: 900;
-  font-size: 4em;
+  font-size: 2.7em;
 }
 
 .ml6 .text-wrapper {
@@ -337,9 +347,9 @@ main {
 
 .ml5 {
   position: relative;
-  font-weight: 300;
-  font-size: 2em;
-  color: #ff8c05;
+  font-weight: bold;
+  font-size: 3em;
+  color: #ffffff;
 }
 
 .ml5 .text-wrapper {

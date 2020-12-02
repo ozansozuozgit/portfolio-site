@@ -6,6 +6,7 @@ $second-color: #ffffff;
 // $third-color: #262626;
 $fourth-color: #ff3b7c;
 $fifth-color: #4070f4;
+$col: #b3ff98;
 
 body {
   background-color: $primary-color;
@@ -141,6 +142,7 @@ body {
 main {
   width: 80%;
   margin: auto;
+  overflow-x: hidden;
 }
 
 #landing {
@@ -148,9 +150,10 @@ main {
   align-items: center;
   justify-content: space-around;
   background: url(images/pattern1.png) no-repeat 50% 50%;
-  height: 67vh;
-  margin-top: 23vh;
-  min-height: 500px;
+  height: 58vh;
+  margin-top: 18vh;
+  min-height: 480px;
+  position: relative;
 
   .landing-text-contact {
     height: 550px;
@@ -180,9 +183,16 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: url(images/pattern1.png) no-repeat 50% 50%;
   height: 65vh;
   margin-top: 50vh;
+  position: relative;
+  .about-background {
+    position: absolute;
+    height: 130%;
+    width: 100%;
+    background: url(images/pattern1.png) no-repeat 50% 50%;
+    z-index: -24;
+  }
   .about-tech {
     display: flex;
     flex-direction: column;
@@ -225,7 +235,7 @@ main {
   }
   .about-title {
     font-size: 2em;
-    color: $fourth-color;
+    color: $first-color;
   }
   .about-text {
     flex: 0.4;
@@ -242,7 +252,7 @@ main {
 .ml6 {
   position: relative;
   font-weight: 900;
-  font-size: 4em;
+  font-size: 2.7em;
 }
 
 .ml6 .text-wrapper {
@@ -261,9 +271,9 @@ main {
 // Front end developer animation
 .ml5 {
   position: relative;
-  font-weight: 300;
-  font-size: 2em;
-  color: $first-color;
+  font-weight: bold;
+  font-size: 3em;
+  color: $second-color;
 }
 
 .ml5 .text-wrapper {
