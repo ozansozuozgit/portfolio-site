@@ -129,9 +129,9 @@ document.querySelectorAll('.nav-link').forEach((link) => {
   gsap.to(sectionTrigger, {
     scrollTrigger: {
       trigger: sectionTrigger,
-      start: 'center center',
-
-      end: 'center top',
+      start: 'top 20%',
+      markers: true,
+      end: 'bottom 20%',
       scrub: 0.5,
       // pin: true,
       onEnter: () => {
@@ -153,21 +153,41 @@ document.querySelectorAll('.nav-link').forEach((link) => {
     ease: 'power4.in',
   });
 
-  gsap.from(sectionTrigger, {
-    scrollTrigger: {
-      trigger: sectionTrigger,
-      start: 'top bottom',
-      end: 'center bottom',
-      scrub: 0.5,
-      onEnter: () => {
-        console.log('enter');
-      },
-      onLeave: () => {
-        console.log('leave');
-      },
-    },
-    xPercent: 100,
-    duration: 1,
-    ease: 'power4.in',
+  // gsap.from(sectionTrigger, {
+  //   scrollTrigger: {
+  //     trigger: sectionTrigger,
+  //     start: 'top bottom',
+  //     end: 'center bottom',
+  //     scrub: 0.5,
+  //     onEnter: () => {
+  //       console.log('enter');
+  //     },
+  //     onLeave: () => {
+  //       console.log('leave');
+  //     },
+  //   },
+  //   xPercent: 100,
+  //   duration: 1,
+  //   ease: 'power4.in',
+  // });
+});
+
+const reveal = gsap.utils.toArray('.reveal');
+reveal.forEach((text, i) => {
+  ScrollTrigger.create({
+    trigger: text,
+    toggleClass: 'active',
+    start: 'top 80%',
+    end: 'top 20%',
+  });
+});
+
+const images = gsap.utils.toArray('.project-container img');
+images.forEach((image, i) => {
+  ScrollTrigger.create({
+    trigger: image,
+    toggleClass: 'image-active',
+    start: 'top 80%',
+    end: 'top 20%',
   });
 });
