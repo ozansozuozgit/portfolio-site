@@ -6,7 +6,6 @@ $second-color: #ffffff;
 // $third-color: #262626;
 $fourth-color: #ff3b7c;
 $fifth-color: #4070f4;
-$col: #b3ff98;
 
 body {
   background-color: $primary-color;
@@ -500,19 +499,6 @@ main {
   }
 }
 
-#contact {
-  // height: 45vh;
-  // margin-top: 20vh;
-  // form {
-  //   height: 60%;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-around;
-  //   align-items: center;
-  // }
-}
-
-
 /*//////////////////////////////////////////////////////////////////
 [ Contact ]*/
 
@@ -552,7 +538,7 @@ button:hover {
 
 .wrap-contact100 {
   width: 1170px;
-  background: #fff;
+  background: url(images/pattern1.png) no-repeat 50% 50%;
   border-radius: 10px;
   padding: 82px 180px 33px 180px;
   position: relative;
@@ -568,10 +554,6 @@ button:hover {
 
 .contact100-form {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -581,9 +563,8 @@ button:hover {
 .contact100-form-title {
   display: block;
   width: 100%;
-  font-family: Poppins-Bold;
   font-size: 39px;
-  color: #333333;
+  color: $first-color;
   line-height: 1.2;
   text-align: left;
   padding-bottom: 44px;
@@ -605,9 +586,8 @@ button:hover {
 }
 
 .label-input100 {
-  font-family: Poppins-Regular;
   font-size: 15px;
-  color: #999999;
+  color: $second-color;
   line-height: 1.5;
   padding-left: 5px;
 }
@@ -616,9 +596,8 @@ button:hover {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: Poppins-SemiBold;
   font-size: 18px;
-  color: #555555;
+  color: #c8c8c8;
   line-height: 1.2;
   padding: 0 5px;
 }
@@ -642,7 +621,7 @@ button:hover {
   width: 0;
   height: 2px;
   transition: all 0.4s;
-  background: #ff4b5a;
+  background: $fourth-color;
 }
 
 /*---------------------------------------------*/
@@ -687,7 +666,6 @@ textarea.input100 {
   color: #fff;
   line-height: 1.2;
   box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
-
 }
 
 .contact100-form-btn:hover {
@@ -709,6 +687,9 @@ textarea.input100 {
 }
 
 @media (max-width: 768px) {
+  .contact100-form-title {
+    font-size: 25px;
+  }
   .rs1-wrap-input100 {
     width: 100%;
   }

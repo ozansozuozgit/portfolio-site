@@ -678,7 +678,7 @@ button:hover {
 
 .wrap-contact100 {
   width: 1170px;
-  background: #fff;
+  background: url(images/pattern1.png) no-repeat 50% 50%;
   border-radius: 10px;
   padding: 82px 180px 33px 180px;
   position: relative;
@@ -707,9 +707,8 @@ button:hover {
 .contact100-form-title {
   display: block;
   width: 100%;
-  font-family: Poppins-Bold;
   font-size: 39px;
-  color: #333333;
+  color: #ff8c05;
   line-height: 1.2;
   text-align: left;
   padding-bottom: 44px;
@@ -730,9 +729,8 @@ button:hover {
 }
 
 .label-input100 {
-  font-family: Poppins-Regular;
   font-size: 15px;
-  color: #999999;
+  color: #ffffff;
   line-height: 1.5;
   padding-left: 5px;
 }
@@ -741,9 +739,8 @@ button:hover {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: Poppins-SemiBold;
   font-size: 18px;
-  color: #555555;
+  color: #c8c8c8;
   line-height: 1.2;
   padding: 0 5px;
 }
@@ -768,7 +765,7 @@ button:hover {
   height: 2px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background: #ff4b5a;
+  background: #ff3b7c;
 }
 
 /*---------------------------------------------*/
@@ -845,6 +842,9 @@ textarea.input100 {
 }
 
 @media (max-width: 768px) {
+  .contact100-form-title {
+    font-size: 25px;
+  }
   .rs1-wrap-input100 {
     width: 100%;
   }

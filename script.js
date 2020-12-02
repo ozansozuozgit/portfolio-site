@@ -131,7 +131,6 @@ document.querySelectorAll('.nav-link').forEach((link) => {
       trigger: sectionTrigger,
       start: 'top 20%',
       end: 'bottom 20%',
-      markers: true,
       scrub: 0.5,
       // pin: true,
       onEnter: () => {
@@ -149,7 +148,6 @@ document.querySelectorAll('.nav-link').forEach((link) => {
     },
     opacity: 0,
     duration: 1,
-    // transformOrigin: 'left center',
     ease: 'power4.in',
   });
 });
@@ -176,14 +174,12 @@ images.forEach((image, i) => {
 const projects = gsap.utils.toArray('.project-container');
 
 const projectBackgrounds = gsap.utils.toArray('.project-background');
-console.log(projects);
 projectBackgrounds.forEach((project, i) => {
   gsap.from(project, {
     scrollTrigger: {
       trigger: projects[i],
       start: 'top 100%',
       end: 'bottom 50%',
-      // markers: true,
       scrub: 2,
     },
     xPercent: 200,
