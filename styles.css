@@ -161,6 +161,48 @@ body {
   #landing .landing-social {
     margin: auto;
   }
+  #about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh !important;
+  }
+  #about .about-text {
+    width: 80%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 15%;
+  }
+  #about .about-text h4 {
+    font-size: 1.4em;
+    text-align: center;
+    margin: 0;
+  }
+  #about .about-text p {
+    font-size: 14px !important;
+  }
+  #about .about-tech {
+    width: 100%;
+  }
+  #about .about-tech h2 {
+    font-size: 13px;
+  }
+  #about .tech-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  #about .tech-icons h4 {
+    font-size: 12px;
+  }
 }
 
 .nav-active {
@@ -307,15 +349,16 @@ main {
   height: 32px;
 }
 
-#about .about-title {
-  font-size: 2em;
-  color: #ff8c05;
-}
-
 #about .about-text {
   -webkit-box-flex: 0.4;
       -ms-flex: 0.4;
           flex: 0.4;
+}
+
+#about .about-text h4 {
+  font-size: 2.4em;
+  color: #ff8c05;
+  letter-spacing: 2px;
 }
 
 #about .about-text p {
@@ -327,7 +370,7 @@ main {
 
 .ml6 {
   position: relative;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 2.7em;
 }
 
@@ -366,6 +409,10 @@ main {
   opacity: 0;
 }
 
+.ml5 .letters:nth-child(3) {
+  color: #ff8c05;
+}
+
 .landing-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,7 +433,7 @@ main {
 }
 
 .landing-social i:hover {
-  color: #ff3b7c;
+  color: #4070f4;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }

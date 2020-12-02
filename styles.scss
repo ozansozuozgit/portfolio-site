@@ -134,6 +134,43 @@ body {
       margin: auto;
     }
   }
+
+  #about {
+    flex-direction: column;
+    height: 100vh !important;
+
+    .about-text {
+      width: 80%;
+      justify-content: space-evenly;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15%;
+      h4 {
+        font-size: 1.4em;
+        text-align: center;
+        margin: 0;
+      }
+      p {
+        font-size: 14px !important;
+      }
+    }
+
+    .about-tech {
+      width: 100%;
+      h2 {
+        font-size: 13px;
+      }
+    }
+    .tech-icons {
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      h4 {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 .nav-active {
@@ -233,12 +270,14 @@ main {
       }
     }
   }
-  .about-title {
-    font-size: 2em;
-    color: $first-color;
-  }
+
   .about-text {
     flex: 0.4;
+    h4 {
+      font-size: 2.4em;
+      color: $first-color;
+      letter-spacing: 2px;
+    }
     p {
       font-size: 19px;
       line-height: normal;
@@ -251,44 +290,45 @@ main {
 // Intro text animation
 .ml6 {
   position: relative;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 2.7em;
+  .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
 }
 
-.ml6 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml6 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
 // Front end developer animation
 .ml5 {
   position: relative;
   font-weight: bold;
   font-size: 3em;
   color: $second-color;
+  .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+    line-height: 1em;
+  }
+  .letters {
+    display: inline-block;
+    opacity: 0;
+  }
+  .letters:nth-child(3) {
+    color: rgb(255, 140, 5);
+  }
 }
 
-.ml5 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.1em;
-  padding-right: 0.05em;
-  padding-bottom: 0.15em;
-  line-height: 1em;
-}
-
-.ml5 .letters {
-  display: inline-block;
-  opacity: 0;
-}
 .landing-social {
   display: flex;
   justify-content: space-between;
@@ -298,7 +338,7 @@ main {
     color: $first-color;
     transition: transform 0.2s ease-in;
     &:hover {
-      color: $fourth-color;
+      color: $fifth-color;
       transform: translateY(-5px);
     }
   }

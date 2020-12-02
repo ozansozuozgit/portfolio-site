@@ -111,35 +111,12 @@ ScrollTrigger.create({
   },
 });
 
-// gsap.from('.about-title', {
-//   scrollTrigger: {
-//     trigger: '.about-text',
-//     start: 'center bottom',
-//     end: '-=500',
-//     scrub: 2,
-//   },
-//   xPercent: -200,
-//   yPercent: -200,
-//   opacity: 0,
-//   scale: 0.5,
-// });
 gsap.from('.about-background', {
   scrollTrigger: {
     trigger: '.about-text',
     start: 'top center',
     end: 'center bottom',
     scrub: 2,
-  },
-  xPercent: 200,
-  opacity: 0,
-});
-
-gsap.from('.landing-background', {
-  scrollTrigger: {
-    trigger: '.landing-social',
-    start: 'top bottom',
-    end: 'top 150px',
-    scrub: 1,
   },
   xPercent: 200,
   opacity: 0,
@@ -173,6 +150,24 @@ document.querySelectorAll('.nav-link').forEach((link) => {
     opacity: 0,
     duration: 1,
     // transformOrigin: 'left center',
+    ease: 'power4.in',
+  });
+
+  gsap.from(sectionTrigger, {
+    scrollTrigger: {
+      trigger: sectionTrigger,
+      start: 'top bottom',
+      end: 'center bottom',
+      scrub: 0.5,
+      onEnter: () => {
+        console.log('enter');
+      },
+      onLeave: () => {
+        console.log('leave');
+      },
+    },
+    xPercent: 100,
+    duration: 1,
     ease: 'power4.in',
   });
 });
