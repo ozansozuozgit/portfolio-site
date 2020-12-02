@@ -620,6 +620,10 @@ main {
   width: 50%;
 }
 
+#projects .project-container a:hover {
+  opacity: 0.5;
+}
+
 #projects .project-container a img {
   display: block;
   width: 100%;

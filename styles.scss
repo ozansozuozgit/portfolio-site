@@ -486,6 +486,9 @@ main {
       margin-left: 10px;
       margin-top: 20px;
       width: 50%;
+      &:hover {
+        opacity: 0.5;
+      }
       img {
         display: block;
         width: 100%;
