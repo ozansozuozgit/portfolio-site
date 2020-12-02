@@ -587,8 +587,11 @@ main {
   transition: 0.5s;
 }
 
-#projects .project-container .project-info p {
+#projects .project-container .project-info .project-text {
   width: 50%;
+}
+
+#projects .project-container .project-info .project-text p {
   font-size: 1.2em;
   font-weight: lighter;
   letter-spacing: 1px;
@@ -599,14 +602,20 @@ main {
           flex: 0.5;
 }
 
+#projects .project-container .project-info .project-text .pomodoro-react {
+  color: #4070f4;
+  text-decoration: none;
+}
+
+#projects .project-container .project-info .project-text .pomodoro-react:hover {
+  color: #ffffff;
+}
+
 #projects .project-container a {
   display: block;
   margin-left: 10px;
   margin-top: 20px;
   width: 50%;
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
 }
 
 #projects .project-container a img {

@@ -469,15 +469,23 @@ main {
       opacity: 0;
       left: -100px;
       transition: 0.5s;
-
-      p {
+      .project-text {
         width: 50%;
-        font-size: 1.2em;
-        font-weight: lighter;
-        letter-spacing: 1px;
-        line-height: 25px;
-        padding: 20px;
-        flex: 0.5;
+        p {
+          font-size: 1.2em;
+          font-weight: lighter;
+          letter-spacing: 1px;
+          line-height: 25px;
+          padding: 20px;
+          flex: 0.5;
+        }
+        .pomodoro-react {
+          color: $fifth-color;
+          text-decoration: none;
+          &:hover {
+            color: $second-color;
+          }
+        }
       }
     }
     a {
@@ -485,7 +493,6 @@ main {
       margin-left: 10px;
       margin-top: 20px;
       width: 50%;
-      flex: 0.5;
       img {
         display: block;
         width: 100%;
