@@ -203,6 +203,36 @@ body {
   #about .tech-icons h4 {
     font-size: 12px;
   }
+  #projects .project-background {
+    height: 80% !important;
+  }
+  #projects .project-info {
+    margin-top: 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: initial !important;
+        -ms-flex-align: initial !important;
+            align-items: initial !important;
+  }
+  #projects a {
+    width: 90% !important;
+  }
+  #projects .project-text {
+    width: 90% !important;
+  }
+  #projects .project-text p {
+    font-size: 1.3em !important;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #projects .project-text p {
+    font-size: 0.8em !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
 }
 
 .nav-active {
@@ -585,6 +615,7 @@ main {
   left: -100px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  margin-top: 0;
 }
 
 #projects .project-container .project-info .project-text {
