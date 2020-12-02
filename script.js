@@ -131,6 +131,7 @@ document.querySelectorAll('.nav-link').forEach((link) => {
       trigger: sectionTrigger,
       start: 'top 20%',
       end: 'bottom 20%',
+      markers: true,
       scrub: 0.5,
       // pin: true,
       onEnter: () => {
