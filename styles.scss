@@ -238,14 +238,13 @@ main {
     height: 60%;
   }
   img {
-    border: 3px solid #acb008;
-    border-radius: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #ff8c05;
     width: 100%;
     height: 100%;
     max-width: 400px;
     max-height: 400px;
     position: absolute;
-    z-index: 2;
   }
   #landing-anchor {
     position: absolute;
@@ -385,42 +384,6 @@ main {
   }
 }
 
-.skills {
-  height: 100vh;
-}
-
-.border-animate::before,
-.border-animate::after {
-  display: block;
-  content: '';
-  position: absolute;
-  width: 102%;
-  height: 102%;
-  background: $first-color;
-  border-radius: 50%;
-  z-index: 1;
-  animation: 3s clockwise infinite;
-  max-width: 400px;
-  max-height: 400px;
-  left: 2%;
-  background: radial-gradient(
-    circle,
-    rgba(165, 79, 119, 1) 51%,
-    rgba(255, 140, 5, 1) 95%,
-    rgba(38, 38, 38, 1) 99%
-  );
-}
-.border-animate:after {
-  background: $fourth-color;
-  background: radial-gradient(
-    circle,
-    rgba(255, 140, 5, 1) 4%,
-    rgba(165, 79, 119, 1) 85%,
-    rgba(38, 38, 38, 1) 100%
-  );
-
-  animation: 2s clockwise infinite;
-}
 #projects {
   margin-top: 50vh;
 
@@ -465,7 +428,7 @@ main {
       font-size: 1em;
       letter-spacing: 2px;
       display: inline-block;
-      color: $fourth-color;
+      color: $first-color;
     }
     .active {
       transform: scaleX(1);
@@ -484,7 +447,7 @@ main {
       transition-delay: 0;
     }
     .reveal:nth-child(2)::before {
-      background: $fourth-color;
+      background: $first-color;
     }
     .active:before {
       transform: scaleX(0);
@@ -527,88 +490,12 @@ main {
         display: block;
         width: 100%;
         border-radius: 10px;
-        border: 1px solid $fifth-color;
+        box-shadow: 0px 0px 3px $second-color;
       }
     }
     .project-active {
       left: 0;
       opacity: 1;
     }
-  }
-}
-@keyframes clockwise {
-  0% {
-    top: -5px;
-    left: 0;
-  }
-  12% {
-    top: -2px;
-    left: 2px;
-  }
-  25% {
-    top: 0;
-    left: 5px;
-  }
-  37% {
-    top: 2px;
-    left: 2px;
-  }
-  50% {
-    top: 5px;
-    left: 0;
-  }
-  62% {
-    top: 2px;
-    left: -2px;
-  }
-  75% {
-    top: 0;
-    left: -5px;
-  }
-  87% {
-    top: -2px;
-    left: -2px;
-  }
-  100% {
-    top: -5px;
-    left: 0;
-  }
-}
-@keyframes counterclockwise {
-  0% {
-    top: -5px;
-    right: 0;
-  }
-  12% {
-    top: -2px;
-    right: 2px;
-  }
-  25% {
-    top: 0;
-    right: 5px;
-  }
-  37% {
-    top: 2px;
-    right: 2px;
-  }
-  50% {
-    top: 5px;
-    right: 0;
-  }
-  62% {
-    top: 2px;
-    right: -2px;
-  }
-  75% {
-    top: 0;
-    right: -5px;
-  }
-  87% {
-    top: -2px;
-    right: -2px;
-  }
-  100% {
-    top: -5px;
-    right: 0;
   }
 }

@@ -284,14 +284,14 @@ main {
 }
 
 #landing img {
-  border: 3px solid #acb008;
-  border-radius: 50%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px #ff8c05;
+          box-shadow: 0px 0px 5px #ff8c05;
   width: 100%;
   height: 100%;
   max-width: 400px;
   max-height: 400px;
   position: absolute;
-  z-index: 2;
 }
 
 #landing #landing-anchor {
@@ -478,35 +478,6 @@ main {
           transform: translateY(-5px);
 }
 
-.skills {
-  height: 100vh;
-}
-
-.border-animate::before,
-.border-animate::after {
-  display: block;
-  content: '';
-  position: absolute;
-  width: 102%;
-  height: 102%;
-  background: #ff8c05;
-  border-radius: 50%;
-  z-index: 1;
-  -webkit-animation: 3s clockwise infinite;
-          animation: 3s clockwise infinite;
-  max-width: 400px;
-  max-height: 400px;
-  left: 2%;
-  background: radial-gradient(circle, #a54f77 51%, #ff8c05 95%, #262626 99%);
-}
-
-.border-animate:after {
-  background: #ff3b7c;
-  background: radial-gradient(circle, #ff8c05 4%, #a54f77 85%, #262626 100%);
-  -webkit-animation: 2s clockwise infinite;
-          animation: 2s clockwise infinite;
-}
-
 #projects {
   margin-top: 50vh;
 }
@@ -564,7 +535,7 @@ main {
   font-size: 1em;
   letter-spacing: 2px;
   display: inline-block;
-  color: #ff3b7c;
+  color: #ff8c05;
 }
 
 #projects .project-container .active {
@@ -591,7 +562,7 @@ main {
 }
 
 #projects .project-container .reveal:nth-child(2)::before {
-  background: #ff3b7c;
+  background: #ff8c05;
 }
 
 #projects .project-container .active:before {
@@ -653,167 +624,12 @@ main {
   display: block;
   width: 100%;
   border-radius: 10px;
-  border: 1px solid #4070f4;
+  -webkit-box-shadow: 0px 0px 3px #ffffff;
+          box-shadow: 0px 0px 3px #ffffff;
 }
 
 #projects .project-container .project-active {
   left: 0;
   opacity: 1;
-}
-
-@-webkit-keyframes clockwise {
-  0% {
-    top: -5px;
-    left: 0;
-  }
-  12% {
-    top: -2px;
-    left: 2px;
-  }
-  25% {
-    top: 0;
-    left: 5px;
-  }
-  37% {
-    top: 2px;
-    left: 2px;
-  }
-  50% {
-    top: 5px;
-    left: 0;
-  }
-  62% {
-    top: 2px;
-    left: -2px;
-  }
-  75% {
-    top: 0;
-    left: -5px;
-  }
-  87% {
-    top: -2px;
-    left: -2px;
-  }
-  100% {
-    top: -5px;
-    left: 0;
-  }
-}
-
-@keyframes clockwise {
-  0% {
-    top: -5px;
-    left: 0;
-  }
-  12% {
-    top: -2px;
-    left: 2px;
-  }
-  25% {
-    top: 0;
-    left: 5px;
-  }
-  37% {
-    top: 2px;
-    left: 2px;
-  }
-  50% {
-    top: 5px;
-    left: 0;
-  }
-  62% {
-    top: 2px;
-    left: -2px;
-  }
-  75% {
-    top: 0;
-    left: -5px;
-  }
-  87% {
-    top: -2px;
-    left: -2px;
-  }
-  100% {
-    top: -5px;
-    left: 0;
-  }
-}
-
-@-webkit-keyframes counterclockwise {
-  0% {
-    top: -5px;
-    right: 0;
-  }
-  12% {
-    top: -2px;
-    right: 2px;
-  }
-  25% {
-    top: 0;
-    right: 5px;
-  }
-  37% {
-    top: 2px;
-    right: 2px;
-  }
-  50% {
-    top: 5px;
-    right: 0;
-  }
-  62% {
-    top: 2px;
-    right: -2px;
-  }
-  75% {
-    top: 0;
-    right: -5px;
-  }
-  87% {
-    top: -2px;
-    right: -2px;
-  }
-  100% {
-    top: -5px;
-    right: 0;
-  }
-}
-
-@keyframes counterclockwise {
-  0% {
-    top: -5px;
-    right: 0;
-  }
-  12% {
-    top: -2px;
-    right: 2px;
-  }
-  25% {
-    top: 0;
-    right: 5px;
-  }
-  37% {
-    top: 2px;
-    right: 2px;
-  }
-  50% {
-    top: 5px;
-    right: 0;
-  }
-  62% {
-    top: 2px;
-    right: -2px;
-  }
-  75% {
-    top: 0;
-    right: -5px;
-  }
-  87% {
-    top: -2px;
-    right: -2px;
-  }
-  100% {
-    top: -5px;
-    right: 0;
-  }
 }
 /*# sourceMappingURL=styles.css.map */
