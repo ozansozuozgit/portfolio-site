@@ -103,18 +103,18 @@ body {
   }
   .nav-links {
     position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: $primary-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
     transform: translate(100%);
-    // transition: transform 0.5s ease-in;
-    border: 1px solid $second-color;
+    border: 1px solid $first-color;
     z-index: 123123;
+    height: 70vh;
+    top: 3vh;
+    right: 1px;
+    background: url(images/pattern1.png) no-repeat 50% 50%;
+
     li {
       opacity: 0;
     }

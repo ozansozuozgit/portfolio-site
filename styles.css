@@ -126,10 +126,6 @@ body {
   }
   .nav-links {
     position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: #212121;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -143,8 +139,12 @@ body {
     width: 50%;
     -webkit-transform: translate(100%);
             transform: translate(100%);
-    border: 1px solid #ffffff;
+    border: 1px solid #ff8c05;
     z-index: 123123;
+    height: 70vh;
+    top: 3vh;
+    right: 1px;
+    background: url(images/pattern1.png) no-repeat 50% 50%;
   }
   .nav-links li {
     opacity: 0;
