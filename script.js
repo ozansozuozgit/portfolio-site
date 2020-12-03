@@ -6,14 +6,20 @@ const navSlide = () => {
   burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
 
-    anime({
-      targets: navLinks,
-      translateX: [100, 0], // from to
-      opacity: 1,
-      scaleY: [0, 1],
-      easing: 'easeOutExpo',
-      delay: anime.stagger(300),
-    });
+    gsap.fromTo(
+      navLinks,
+      {
+        stagger: 1,
+        x: 100,
+        opacity: 0,
+      },
+      {
+        stagger: 0.1,
+        opacity: 1,
+        duration: 0.4,
+        x: 0,
+      }
+    );
     burger.classList.toggle('toggle');
   });
 };
@@ -27,79 +33,53 @@ textWrapper.innerHTML = textWrapper.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
 );
-var myTimeline = anime.timeline();
+let tl = gsap.timeline();
 
-myTimeline.add({
-  targets: '.landing-text-contact',
-  translateY: ['-100%', 0],
-  opacity: [0, 1],
-  translateZ: 0,
-  duration: 750,
-  delay: 750,
-});
-myTimeline.add({
-  targets: '.ml6 .letter',
-  translateY: ['1.1em', 0],
-  translateZ: 0,
-  duration: 750,
-  delay: (el, i) => 50 * i,
-});
-myTimeline.add(
-  {
-    targets: [
-      '.letter:nth-child(4)',
-      '.letter:nth-child(5)',
-      '.letter:nth-child(6)',
-      '.letter:nth-child(7)',
-    ],
-
-    translateY: ['2.1em', 0],
-    duration: 1000,
-    color: '#ff8c05',
-  },
-  '+=300'
+tl.fromTo(
+  '.landing-text-contact',
+  { yPercent: -120 },
+  { yPercent: 0, duration: 0.4, delay: 0.4 }
 );
-myTimeline.add(
-  {
-    targets: '.border-animate',
-    opacity: [0, 1],
-    scale: [0.2, 1],
-    duration: 1500,
-  },
-  '-=1000'
+tl.fromTo(
+  '.ml6 .letter',
+  { y: '1.1em' },
+  { y: 0, stagger: 0.1, duration: 0.2, ease: 'back.out(3.7)' }
 );
-
-myTimeline
-  .add(
-    {
-      targets: '.ml5 .ampersand',
-      opacity: [0, 1],
-      scaleY: [0.5, 1],
-      easing: 'easeOutExpo',
-      duration: 600,
-    },
-    '-=1000'
-  )
-  .add(
-    {
-      targets: '.ml5 .letters-left',
-      opacity: [0, 1],
-      translateX: ['0.5em', 0],
-      easing: 'easeOutExpo',
-      duration: 600,
-    },
-    '-=1000'
-  )
-  .add(
-    {
-      targets: '.ml5 .letters-right',
-      opacity: [0, 1],
-      translateX: ['-0.5em', 0],
-      easing: 'easeOutExpo',
-      duration: 600,
-    },
-    '-=500'
-  );
+tl.fromTo(
+  [
+    '.letter:nth-child(4)',
+    '.letter:nth-child(5)',
+    '.letter:nth-child(6)',
+    '.letter:nth-child(7)',
+  ],
+  { y: '1.8em' },
+  { y: 0, color: '#ff8c05', ease: 'power4.out', duration: 0.6 },
+  '+=0.7'
+);
+tl.fromTo(
+  'section img',
+  { opacity: 0, scale: 0.2 },
+  { opacity: 1, scale: 1, ease: 'power4.in', duration: 0.4 },
+  '-=0.8'
+);
+tl.fromTo(
+  '.second-word',
+  { y: '1em', opacity: 0 },
+  { y: 0, opacity: 1, delay: 1, ease: 'power4.out' },
+  '-=1.2'
+);
+tl.fromTo(
+  '.first-word',
+  { x: '1em', opacity: 0 },
+  { x: 0, opacity: 1, delay: 1, ease: 'power4.out' },
+  '-=1'
+);
+tl.fromTo(
+  '.third-word',
+  { x: '-1em', opacity: 0 },
+  { x: 0, opacity: 1, delay: 1, ease: 'power4.out' },
+  '-=1'
+);
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.create({
