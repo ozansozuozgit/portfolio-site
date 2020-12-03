@@ -5,7 +5,6 @@ const navSlide = () => {
   // Toggle Nav
   burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
-
     gsap.fromTo(
       navLinks,
       {
@@ -127,17 +126,19 @@ document.querySelectorAll('.nav-link').forEach((link) => {
 });
 
 const reveal = gsap.utils.toArray('.reveal');
-reveal.forEach((text, i) => {
+reveal.forEach((text) => {
   ScrollTrigger.create({
     trigger: text,
-    toggleClass: 'active',
     start: 'top 80%',
     end: 'top 20%',
+    onEnter: () => {
+      text.classList.add('active');
+    },
   });
 });
 
 const images = gsap.utils.toArray('.project-info');
-images.forEach((image, i) => {
+images.forEach((image) => {
   ScrollTrigger.create({
     trigger: image,
     toggleClass: 'project-active',
@@ -153,10 +154,10 @@ projectBackgrounds.forEach((project, i) => {
     scrollTrigger: {
       trigger: projects[i],
       start: 'top 100%',
-      end: 'bottom 50%',
-      scrub: 2,
+      end: 'bottom 100%',
+      scrub: 3,
     },
-    xPercent: 200,
+    xPercent: 100,
     opacity: 0,
   });
 });
