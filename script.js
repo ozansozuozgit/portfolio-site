@@ -9,16 +9,10 @@ const navSlide = () => {
     gsap.fromTo(
       navLinks,
       {
-        stagger: 1,
-        x: 100,
+        xPercent: 200,
         opacity: 0,
       },
-      {
-        stagger: 0.1,
-        opacity: 1,
-        duration: 0.4,
-        x: 0,
-      }
+      { stagger: 0, opacity: 1, duration: 0.9, xPercent: 0 }
     );
     burger.classList.toggle('toggle');
   });
