@@ -377,7 +377,7 @@ main {
     color: $first-color;
     transition: transform 0.2s ease-in;
     &:hover {
-      color: $fifth-color;
+      color: $fourth-color;
       transform: translateY(-5px);
     }
   }
