@@ -582,6 +582,11 @@ textarea.input100 {
   .nav-links {
     width: 50%;
   }
+  #landing {
+    img {
+      display: none;
+    }
+  }
 }
 @media (max-width: 992px) {
   .wrap-contact100 {
@@ -619,9 +624,7 @@ textarea.input100 {
     .landing-text {
       text-align: center;
     }
-    img {
-      display: none;
-    }
+
     .landing-social {
       margin: auto;
     }

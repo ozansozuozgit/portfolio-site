@@ -733,6 +733,9 @@ textarea.input100 {
   .nav-links {
     width: 50%;
   }
+  #landing img {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -775,9 +778,6 @@ textarea.input100 {
   }
   #landing .landing-text {
     text-align: center;
-  }
-  #landing img {
-    display: none;
   }
   #landing .landing-social {
     margin: auto;
