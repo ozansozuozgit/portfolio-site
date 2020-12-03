@@ -3,7 +3,7 @@
 $primary-color: #212121;
 $first-color: #ff8c05;
 $second-color: #ffffff;
-// $third-color: #262626;
+$third-color: #262626;
 $fourth-color: #ff3b7c;
 $fifth-color: #4070f4;
 
@@ -16,13 +16,14 @@ body {
   color: $second-color;
   font-family: 'Poppins', sans-serif;
 }
+
 .main-nav-bar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 7vh;
   background-color: $primary-color;
-  box-shadow: 0px -7px 10px $second-color;
+  box-shadow: 0 0 6px black;
   position: fixed;
   width: 100%;
   left: 0;
@@ -95,123 +96,6 @@ body {
   transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 1024px) {
-  .nav-links {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 878px) {
-  body {
-    overflow-x: hidden;
-  }
-  .nav-links {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translate(100%);
-    border: 1px solid $first-color;
-    z-index: 123123;
-    height: 70vh;
-    top: 3vh;
-    right: 1px;
-    background: url(images/pattern1.png) no-repeat 50% 50%;
-
-    li {
-      opacity: 0;
-    }
-  }
-  .burger {
-    display: block;
-  }
-
-  #landing {
-    .landing-text {
-      text-align: center;
-    }
-    img {
-      display: none;
-    }
-    .landing-social {
-      margin: auto;
-    }
-  }
-
-  #about {
-    flex-direction: column;
-    height: 100vh !important;
-
-    .about-text {
-      width: 80%;
-      justify-content: space-evenly;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 15%;
-      h4 {
-        font-size: 1.4em;
-        text-align: center;
-        margin: 0;
-      }
-      p {
-        font-size: 14px !important;
-      }
-    }
-
-    .about-tech {
-      width: 100%;
-      h2 {
-        font-size: 13px;
-      }
-    }
-    .tech-icons {
-      img {
-        width: 24px;
-        height: 24px;
-      }
-      h4 {
-        font-size: 12px;
-      }
-    }
-  }
-
-  #projects {
-    .project-background {
-      height: 80% !important;
-    }
-    .project-info {
-      margin-top: 10%;
-      flex-direction: column;
-      align-items: initial !important;
-    }
-    a {
-      width: 90% !important;
-    }
-    .project-text {
-      width: 90% !important;
-      p {
-        font-size: 1.3em !important;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 760px) {
-  #projects {
-    .project-text {
-      p {
-        font-size: 0.8em !important;
-        padding-right: 0 !important;
-        padding-left: 0 !important;
-      }
-    }
-  }
-}
-
-.nav-active {
-  transform: translate(0%);
-}
 main {
   width: 80%;
   margin: auto;
@@ -227,6 +111,11 @@ main {
   margin-top: 18vh;
   min-height: 480px;
   position: relative;
+  box-shadow: 0 0 15px black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
 
   .landing-text-contact {
     height: 550px;
@@ -238,10 +127,9 @@ main {
 
   img {
     border-radius: 50%;
-    box-shadow: 0px 0px 5px #ff8c05, 0px 0px 5px #ff8c05;
-    box-shadow: 0px 0px 18px black, 0px 0px 40px $first-color;
-    max-width: 300px;
-    max-height: 300px;
+    box-shadow: 0px 0px 18px black, 0px 0px 40px black;
+    max-width: 280px;
+    max-height: 280px;
     width: 100%;
     height: 100%;
   }
@@ -264,6 +152,9 @@ main {
     width: 100%;
     background: url(images/pattern1.png) no-repeat 50% 50%;
     z-index: -24;
+    box-shadow: 0 0 15px black;
+    width: 95%;
+    border-radius: 15px;
   }
   .about-tech {
     display: flex;
@@ -404,9 +295,10 @@ main {
     .project-background {
       position: absolute;
       height: 50%;
-      width: 100%;
+      width: 98%;
       background: url(images/pattern1.png) no-repeat 50% 50%;
       z-index: -24;
+      box-shadow: 0 0 2px black;
     }
 
     .reveal {
@@ -542,11 +434,12 @@ button:hover {
 }
 
 .wrap-contact100 {
-  width: 1170px;
+  width: 66%;
   background: url(images/pattern1.png) no-repeat 50% 50%;
   border-radius: 10px;
   padding: 50px 50px;
   position: relative;
+  box-shadow: 0 0 15px black;
 }
 
 .show-wrap-contact100 {
@@ -685,9 +578,110 @@ textarea.input100 {
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 50%;
+  }
+}
 @media (max-width: 992px) {
   .wrap-contact100 {
     padding: 82px 80px 33px 80px;
+  }
+}
+
+@media screen and (max-width: 878px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translate(100%);
+    border: 1px solid $first-color;
+    z-index: 123123;
+    height: 70vh;
+    top: 3vh;
+    right: 1px;
+    background: url(images/pattern1.png) no-repeat 50% 50%;
+
+    li {
+      opacity: 0;
+    }
+  }
+  .burger {
+    display: block;
+  }
+
+  #landing {
+    .landing-text {
+      text-align: center;
+    }
+    img {
+      display: none;
+    }
+    .landing-social {
+      margin: auto;
+    }
+  }
+
+  #about {
+    flex-direction: column;
+    height: 100vh !important;
+
+    .about-text {
+      width: 80%;
+      justify-content: space-evenly;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15%;
+      h4 {
+        font-size: 1.4em;
+        text-align: center;
+        margin: 0;
+      }
+      p {
+        font-size: 14px !important;
+      }
+    }
+
+    .about-tech {
+      width: 100%;
+      h2 {
+        font-size: 13px;
+      }
+    }
+    .tech-icons {
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      h4 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  #projects {
+    .project-background {
+      height: 80% !important;
+    }
+    .project-info {
+      margin-top: 10%;
+      flex-direction: column;
+      align-items: initial !important;
+    }
+    a {
+      width: 90% !important;
+    }
+    .project-text {
+      width: 90% !important;
+      p {
+        font-size: 1.3em !important;
+      }
+    }
   }
 }
 
@@ -698,10 +692,30 @@ textarea.input100 {
   .rs1-wrap-input100 {
     width: 100%;
   }
+  .wrap-contact100 {
+    padding: 82px 15px 33px 15px;
+    width: 80%;
+  }
+  #projects {
+    .project-text {
+      p {
+        font-size: 0.8em !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+      }
+    }
+  }
+  .ml6,
+  .ml5 {
+    font-size: 2em;
+  }
 }
 
 @media (max-width: 576px) {
   .wrap-contact100 {
     padding: 82px 15px 33px 15px;
   }
+}
+.nav-active {
+  transform: translate(0%);
 }
