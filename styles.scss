@@ -292,6 +292,7 @@ main {
 
     .tech-categories {
       display: flex;
+      justify-content: center;
     }
     .tech-icons {
       display: flex;
@@ -464,7 +465,7 @@ main {
       .project-text {
         width: 50%;
         p {
-          font-size: 1.2em;
+          font-size: 1em;
           font-weight: lighter;
           letter-spacing: 1px;
           line-height: 25px;
@@ -491,6 +492,7 @@ main {
       img {
         display: block;
         width: 100%;
+        max-width: 650px;
         border-radius: 10px;
         box-shadow: 0px 0px 3px $second-color;
       }
@@ -543,7 +545,7 @@ button:hover {
   width: 1170px;
   background: url(images/pattern1.png) no-repeat 50% 50%;
   border-radius: 10px;
-  padding: 82px 180px 33px 180px;
+  padding: 50px 50px;
   position: relative;
 }
 
@@ -560,7 +562,6 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 68px;
 }
 
 .contact100-form-title {
@@ -669,6 +670,7 @@ textarea.input100 {
   color: #fff;
   line-height: 1.2;
   box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+  transition: all 0.2s ease-in;
 }
 
 .contact100-form-btn:hover {
