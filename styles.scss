@@ -412,7 +412,7 @@ main {
     .reveal {
       position: relative;
       color: #fff;
-      font-size: 1.5em;
+      font-size: 1.8em;
       padding: 0 10px;
       font-weight: 500;
       transform-origin: left;
@@ -428,7 +428,7 @@ main {
       font-size: 1em;
       letter-spacing: 2px;
       display: inline-block;
-      color: $first-color;
+      color: $fourth-color;
     }
     .active {
       transform: scaleX(1);
@@ -447,7 +447,7 @@ main {
       transition-delay: 0;
     }
     .reveal:nth-child(2)::before {
-      background: $first-color;
+      background: $fourth-color;
     }
     .active:before {
       transform: scaleX(0);

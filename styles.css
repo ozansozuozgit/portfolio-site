@@ -516,7 +516,7 @@ main {
 #projects .project-container .reveal {
   position: relative;
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1.8em;
   padding: 0 10px;
   font-weight: 500;
   -webkit-transform-origin: left;
@@ -537,7 +537,7 @@ main {
   font-size: 1em;
   letter-spacing: 2px;
   display: inline-block;
-  color: #ff8c05;
+  color: #ff3b7c;
 }
 
 #projects .project-container .active {
@@ -564,7 +564,7 @@ main {
 }
 
 #projects .project-container .reveal:nth-child(2)::before {
-  background: #ff8c05;
+  background: #ff3b7c;
 }
 
 #projects .project-container .active:before {

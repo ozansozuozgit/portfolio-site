@@ -52,9 +52,9 @@ tl.fromTo(
 );
 tl.fromTo(
   'section img',
-  { opacity: 0, scale: 0.2 },
-  { opacity: 1, scale: 1, ease: 'power4.in', duration: 0.4 },
-  '-=0.8'
+  { opacity: 0, scale: 0.8 },
+  { opacity: 1, scale: 1, ease: 'power4.in', duration: 0.8 },
+  '-=1.2'
 );
 tl.fromTo(
   '.second-word',
