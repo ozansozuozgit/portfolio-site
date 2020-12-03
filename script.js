@@ -160,3 +160,16 @@ projectBackgrounds.forEach((project, i) => {
     opacity: 0,
   });
 });
+
+const techCategories = gsap.utils.toArray('.tech-category');
+
+gsap.from('.tech-categories', {
+  scrollTrigger: {
+    trigger: '.about-text',
+    start: 'top center',
+    end: 'center bottom',
+    scrub: 0.7,
+  },
+  scale: 0,
+  ease: 'power4.out',
+});
