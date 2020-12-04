@@ -282,8 +282,8 @@ main {
 }
 
 #about .about-text p {
-  font-size: 19px;
-  line-height: normal;
+  font-size: 18px;
+  line-height: 30px;
   font-weight: lighter;
   letter-spacing: 2px;
 }
@@ -527,6 +527,10 @@ main {
 
 /*//////////////////////////////////////////////////////////////////
 [ Contact ]*/
+#contact {
+  margin-top: 20vh;
+}
+
 input {
   outline: none;
   border: none;

@@ -90,6 +90,7 @@ gsap.from('.about-background', {
     start: 'top center',
     end: 'center bottom',
     scrub: 2,
+    once: true,
   },
   xPercent: 200,
   opacity: 0,
@@ -137,13 +138,15 @@ reveal.forEach((text) => {
   });
 });
 
-const images = gsap.utils.toArray('.project-info');
-images.forEach((image) => {
+const projectInfo = gsap.utils.toArray('.project-info');
+projectInfo.forEach((project) => {
   ScrollTrigger.create({
-    trigger: image,
-    toggleClass: 'project-active',
+    trigger: project,
     start: 'top 80%',
     end: 'top 20%',
+    onEnter: () => {
+      project.classList.add('project-active');
+    },
   });
 });
 const projects = gsap.utils.toArray('.project-container');
@@ -170,6 +173,7 @@ gsap.from('.tech-categories', {
     start: 'top center',
     end: 'center bottom',
     scrub: 0.7,
+    once: true,
   },
   scale: 0,
   ease: 'power4.out',
