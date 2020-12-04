@@ -733,9 +733,18 @@ textarea.input100 {
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
+@media screen and (max-width: 1280px) {
+  #landing {
+    padding: 0 40px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .nav-links {
     width: 50%;
+  }
+  #landing {
+    padding: 0 20px;
   }
   #landing img {
     display: none;
@@ -853,6 +862,9 @@ textarea.input100 {
 }
 
 @media (max-width: 768px) {
+  #landing {
+    padding: 0 10px;
+  }
   .contact100-form-title {
     font-size: 25px;
   }
