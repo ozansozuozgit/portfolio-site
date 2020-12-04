@@ -283,6 +283,22 @@ main {
     font-size: 2.5em;
     text-align: center;
     color: $first-color;
+    position: relative;
+    margin-bottom: 20vh;
+  }
+
+  h1::after {
+    content: '';
+    border: 1px solid $second-color;
+    position: absolute;
+    border-radius: 15px;
+    background-color: $second-color;
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2.6em;
   }
 
   .project-container {
@@ -292,7 +308,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 20vh;
     .project-background {
       position: absolute;
       height: 50%;
@@ -394,6 +410,10 @@ main {
       left: 0;
       opacity: 1;
     }
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
   }
 }
 
