@@ -273,16 +273,22 @@ main {
   -webkit-box-flex: 0.4;
       -ms-flex: 0.4;
           flex: 0.4;
+  -webkit-box-shadow: 0 0 7px black;
+          box-shadow: 0 0 7px black;
+  background: #27282c;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 #about .about-text h4 {
   font-size: 2.4em;
   color: #ff8c05;
   letter-spacing: 2px;
+  margin: 0;
 }
 
 #about .about-text p {
-  font-size: 18px;
+  font-size: 12px;
   line-height: 30px;
   font-weight: lighter;
   letter-spacing: 2px;
@@ -826,6 +832,9 @@ textarea.input100 {
             flex-direction: column;
     height: 100vh !important;
   }
+  #about .about-background {
+    height: 170%;
+  }
   #about .about-text {
     width: 80%;
     -webkit-box-pack: space-evenly;
@@ -846,13 +855,10 @@ textarea.input100 {
     margin: 0;
   }
   #about .about-text p {
-    font-size: 14px !important;
+    font-size: 12px;
   }
   #about .about-tech {
     width: 100%;
-  }
-  #about .about-tech h2 {
-    font-size: 13px;
   }
   #about .tech-icons img {
     width: 24px;
@@ -911,6 +917,9 @@ textarea.input100 {
 }
 
 @media (max-width: 576px) {
+  #about .about-text p {
+    font-size: 9px;
+  }
   .wrap-contact100 {
     padding: 82px 15px 33px 15px;
   }

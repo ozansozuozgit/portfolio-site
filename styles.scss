@@ -201,13 +201,18 @@ main {
 
   .about-text {
     flex: 0.4;
+    box-shadow: 0 0 7px black;
+    background: #27282c;
+    padding: 10px;
+    border-radius: 15px;
     h4 {
       font-size: 2.4em;
       color: $first-color;
       letter-spacing: 2px;
+      margin: 0;
     }
     p {
-      font-size: 18px;
+      font-size: 12px;
       line-height: 30px;
       font-weight: lighter;
       letter-spacing: 2px;
@@ -664,6 +669,9 @@ textarea.input100 {
   #about {
     flex-direction: column;
     height: 100vh !important;
+    .about-background {
+      height: 170%;
+    }
 
     .about-text {
       width: 80%;
@@ -677,15 +685,12 @@ textarea.input100 {
         margin: 0;
       }
       p {
-        font-size: 14px !important;
+        font-size: 12px;
       }
     }
 
     .about-tech {
       width: 100%;
-      h2 {
-        font-size: 13px;
-      }
     }
     .tech-icons {
       img {
@@ -749,6 +754,13 @@ textarea.input100 {
 }
 
 @media (max-width: 576px) {
+  #about {
+    .about-text {
+      p {
+        font-size: 9px;
+      }
+    }
+  }
   .wrap-contact100 {
     padding: 82px 15px 33px 15px;
   }
