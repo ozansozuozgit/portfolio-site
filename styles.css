@@ -134,7 +134,7 @@ main {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background: url(images/pattern1.png) no-repeat 50% 50%;
+  background: url(images/pattern.png) no-repeat 50% 50%;
   height: 58vh;
   margin-top: 18vh;
   min-height: 480px;
@@ -196,7 +196,7 @@ main {
   position: absolute;
   height: 170%;
   width: 100%;
-  background: url(images/pattern1.png) no-repeat 50% 50%;
+  background: url(images/pattern.png) no-repeat 50% 50%;
   z-index: -24;
   -webkit-box-shadow: 0 0 15px black;
           box-shadow: 0 0 15px black;
@@ -415,7 +415,7 @@ main {
   position: absolute;
   height: 50%;
   width: 98%;
-  background: url(images/pattern1.png) no-repeat 50% 50%;
+  background: url(images/pattern.png) no-repeat 50% 50%;
   z-index: -24;
   -webkit-box-shadow: 0 0 2px black;
           box-shadow: 0 0 2px black;
@@ -604,7 +604,7 @@ button:hover {
 
 .wrap-contact100 {
   width: 66%;
-  background: url(images/pattern1.png) no-repeat 50% 50%;
+  background: url(images/pattern.png) no-repeat 50% 50%;
   border-radius: 10px;
   padding: 50px 50px;
   position: relative;
@@ -817,7 +817,7 @@ textarea.input100 {
     height: 70vh;
     top: 3vh;
     right: 1px;
-    background: url(images/pattern1.png) no-repeat 50% 50%;
+    background: url(images/pattern.png) no-repeat 50% 50%;
   }
   .nav-links li {
     opacity: 0;
