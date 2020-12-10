@@ -12,7 +12,8 @@ html {
 }
 
 body {
-  background-color: $primary-color;
+  // background-color: $primary-color;
+  background-color: #1c1c1c;
   color: $second-color;
   font-family: 'Poppins', sans-serif;
   text-shadow: -2px 0px 5px black;
@@ -99,8 +100,12 @@ body {
 
 main {
   width: 80%;
+  max-width: 1200px;
   margin: auto;
   overflow-x: hidden;
+  box-shadow: 0 0 10px black;
+  background-color: $primary-color;
+  padding: 10px;
 }
 
 #landing {
@@ -152,7 +157,7 @@ main {
     height: 170%;
     width: 100%;
     background: url(images/pattern.png) no-repeat 50% 50%;
-    z-index: -24;
+    z-index: 0;
     box-shadow: 0 0 15px black;
     width: 95%;
     border-radius: 15px;
@@ -205,6 +210,7 @@ main {
     background: #27282c;
     padding: 10px;
     border-radius: 15px;
+    z-index: 1;
     h4 {
       font-size: 2.4em;
       color: $first-color;
@@ -319,7 +325,7 @@ main {
       height: 50%;
       width: 98%;
       background: url(images/pattern.png) no-repeat 50% 50%;
-      z-index: -24;
+      z-index: 0;
       box-shadow: 0 0 2px black;
     }
 
@@ -406,7 +412,7 @@ main {
       img {
         display: block;
         width: 100%;
-        max-width: 590px;
+        max-width: 520px;
         border-radius: 10px;
         box-shadow: 0px 0px 3px $second-color;
       }
